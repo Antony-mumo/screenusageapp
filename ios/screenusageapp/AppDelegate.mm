@@ -1,8 +1,20 @@
 #import "AppDelegate.h"
-#import <React/RCTBridge.h>
+#import <React/RCTBridgeModule.h>
 
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTLinkingManager.h>
+
+@interface RCT_EXTERN_MODULE(ScreenTimeModule, NSObject)
+
+RCT_EXTERN_METHOD(getUsage:(RCTPromiseResolveBlock)resolve
+                 rejecter:(RCTPromiseRejectBlock)reject)
+
++ (BOOL)requiresMainQueueSetup
+{
+  return YES;
+}
+
+@end
 
 @implementation AppDelegate
 

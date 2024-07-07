@@ -20,7 +20,7 @@ const HomeScreen = () => {
 
     return (
         <SafeAreaView style={styles.container}>
-            <View>
+            <View style={styles.content}>
                 <Button title="Refresh Usage Data" onPress={fetchUsage} />
                 {usageData ? (
                     <View>
@@ -51,7 +51,11 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
+    content: {
+    // paddingTop: 10,
+    },
     main: {
+        // flex:1,
         justifyContent: 'center',
     },
     load: {
