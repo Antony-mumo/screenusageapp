@@ -1,4 +1,3 @@
-cat ScreenTimeModule.swift
 import Foundation
 import DeviceActivity
 import React
